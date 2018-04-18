@@ -5,6 +5,7 @@ An easy TimeSeries spliter into "size" batches.
 
 <p> You should have all your legitimate and DDoS TimeSeries stored in diferent folders.
 The format should looks like: </p>
+
 ```
     <date>_<time>-<metric>-<granularity>
 
