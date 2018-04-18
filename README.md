@@ -45,12 +45,14 @@ The format should looks like: </p>
 ## Divide TimeSeries into specific **size batches**
 
 <p>Go to projects folder and fire up a terminal: </p>
+
 ```
     python divider.py <dataset root folder> <size>
     
     Example:
     python divider.py /home/andres/dataset 150
 ```
+
 <p> *NOTE: "size" is the number of elements every new timeseries will have. </p>
 
 ## Separete TimeSeries into granularity and metrics
