@@ -1,3 +1,4 @@
 *.zip
 Results/
 .idea/*
+.idea/vcs.xml
