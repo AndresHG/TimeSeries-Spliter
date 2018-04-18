@@ -5,12 +5,12 @@ An easy TimeSeries spliter into "size" batches.
 
 <p> You should have all your legitimate and DDoS TimeSeries stored in diferent folders.
 The format should looks like: </p>
-<pre> 
+"""
     <date>_<time>-<metric>-<granularity>
 
     Example:
     2018-03-29_18.06.20-difInput_OutputBytes-60000 
-</pre>
+"""
 
 ## Software skills
 
@@ -24,7 +24,7 @@ The format should looks like: </p>
 
 <p>Data should looks like: </p>
 
-<pre>
+"""
     Granualrity1
     Granularity2
     Granularity2
@@ -39,7 +39,7 @@ The format should looks like: </p>
                               .
                               .
                               .
-</pre>
+"""
 
 ## Divide TimeSeries into specific **size batches**
 
