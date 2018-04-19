@@ -10,7 +10,7 @@ The format should looks like: </p>
     <date>_<time>-<metric>-<granularity>
 
     Example:
-    2018-03-29_18.06.20-difInput_OutputBytes-60000 
+        2018-03-29_18.06.20-difInput_OutputBytes-60000 
 ```
 
 ## Software skills
@@ -68,5 +68,4 @@ The format should looks like: </p>
     Example:
         python split.py /home/andres/legitime_timeseries legitimo
         python split.py /home/andres/ddos_timeseries ddos
-
 ```
