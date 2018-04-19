@@ -56,3 +56,17 @@ The format should looks like: </p>
 <p> *NOTE: "size" is the number of elements every new timeseries will have. </p>
 
 ## Separete TimeSeries into granularity and metrics
+
+<ul> If you want to build the whole structure: 
+    <li> First translate legitime TimeSeries </li>
+    <li> Seconda, convert DDoS TimeSeries </li>
+</ul>
+
+```
+    python split.py <path to TS's folders> <"legitimo" / "ddos">
+    
+    Example:
+        python split.py /home/andres/legitime_timeseries legitimo
+        python split.py /home/andres/ddos_timeseries ddos
+
+```
