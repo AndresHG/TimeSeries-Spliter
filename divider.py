@@ -28,10 +28,10 @@ def split_timeseries(src_here, dest, steps):
                     data = [x.strip() for x in data]
                 cont = 0
                 for i in range(0, len(data), steps):
-                    if len(data[i: i + steps]) == steps:
-                        destino = os.path.join(dest_now, filename + "_" + str(cont))
-                        with open(destino, 'w+') as fileno:
-                            fileno.writelines("\n".join(list(data[i: i + steps])))
+                    # if len(data[i: i + steps]) == steps:
+                    destino = os.path.join(dest_now, filename + "_" + str(cont))
+                    with open(destino, 'w+') as fileno:
+                        fileno.writelines("\n".join(list(data[i: i + steps])))
                     cont += 1
 
         if len(os.listdir(dest_now)) == 0:
