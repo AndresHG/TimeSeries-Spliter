@@ -33,9 +33,9 @@ def split_timeseries(src, dest):
             result = adfuller(X)
             print('ADF Statistic: {}'.format(result[0]))
             print('p-value: {}'.format(result[1]))
-            print('Critical Values:')
-            for key, value in result[4].items():
-                print('\t%s: %.3f' % (key, value))
+            # print('Critical Values:')
+            # for key, value in result[4].items():
+            #     print('\t%s: %.3f' % (key, value))
 
 
 if __name__ == '__main__':

@@ -7,7 +7,7 @@ from pprint import pprint
 
 src = "/home/andres/Imágenes/Legitimo_Users"
 dest = os.path.join(os.getcwd(), "Results/Users")
-granularity = "30000"
+granularity = "60000"
 path_ddos = "/home/andres/Imágenes/Ataques"
 
 def split_users(src, dest, path_ddos, granularity):
@@ -67,11 +67,6 @@ def split_users(src, dest, path_ddos, granularity):
     for user in os.listdir(dest):
         path_user = os.path.join(dest, user)
 
-        if granularity == "15000":
-            mutations = 6
-        else:
-            mutations = 12
-
         for metric in os.listdir(path_user):
             path_metric = os.path.join(path_user, metric)
             path_tmp = os.path.join(path_metric, 'tmp')
@@ -79,6 +74,7 @@ def split_users(src, dest, path_ddos, granularity):
             path_ddos = os.path.join(path_metric, 'DDoS')
             if not os.path.isdir(path_ddos):
                 os.mkdir(path_ddos)
+
 
             for filename_legitimo in os.listdir(path_legitimo):
                 file_legitimo = os.path.join(path_legitimo, filename_legitimo)
@@ -103,10 +99,10 @@ def split_users(src, dest, path_ddos, granularity):
 
                     file_ddos = os.path.join(path_ddos, filename_legitimo + "--" + filename_tmp)
 
-                    if granularity == "15000":
-                        data_ddos = data_legitimo + data_tmp
-                    else:
-                        data_ddos = data_legitimo + data_tmp + data_tmp
+                    # if granularity == "15000":
+                    #     data_ddos = data_legitimo + data_tmp
+                    # else:
+                    data_ddos = data_legitimo + data_tmp + data_tmp
 
                     if len(data_ddos) > 20:
                         with open(file_ddos, "w+") as f:
